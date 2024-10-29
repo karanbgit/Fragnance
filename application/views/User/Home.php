@@ -38,6 +38,7 @@
             font-style: normal;
         }
 
+        /* Navigation CSS */
         @media (min-width: 769px) {
             .nav-link:hover {
                 transform: scale(1.1);
@@ -80,27 +81,66 @@
             width: 100%;
         }
 
-
-
-        .circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* CArouser CSS */
+        /* Default height for larger screens */
+        .carousel-image {
+            height: 550px;
         }
 
-        .circle img {
-            width: 100%;
-            height: auto;
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .carousel-image {
+                height: auto;
+                /* Makes height responsive on smaller screens */
+            }
         }
 
-        .label {
-            margin-top: 8px;
-            font-size: 1em;
+
+        /* Card CSS */
+
+        .card-img {
+            transition: transform 0.3s ease;
+            /* Adjust 0.3s for the hover effect speed */
+        }
+
+        .card-img:hover {
+            transform: scale(1.05);
+            /* Slightly increase the scale of the image */
+        }
+
+        /* Trading CSS */
+
+        .trending {
+            background-color: #ff6347;
+            color: white;
             font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .card-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .add-to-cart {
+            background-color: #333;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        .add-to-cart:hover {
+            background-color: #555;
+        }
+
+        .stars {
+            color: #ffa500;
+            margin-right: 5px;
         }
     </style>
 </head>
@@ -195,62 +235,58 @@
     <!-- navbar section -->
 
 
+    <!-- Carousel Code start -->
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-
         <!-- Carousel Items -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/images/caro1.jpeg') ?>" style="height: 550px;"
-                    class="d-block w-100" alt="Slide 1">
+                <img src="<?php echo base_url('assets/images/caro1.jpeg') ?>" class="carousel-image d-block w-100"
+                    alt="Slide 1">
             </div>
             <div class="carousel-item">
-                <img src="<?php echo base_url('assets/images/caro2.jpeg') ?>" style="height: 550px;"
-                    class="d-block w-100" alt="Slide 2">
+                <img src="<?php echo base_url('assets/images/caro2.jpeg') ?>" class="carousel-image d-block w-100"
+                    alt="Slide 2">
             </div>
             <div class="carousel-item">
-                <img src="<?php echo base_url('assets/images/caro3.jpeg') ?>" style="height: 550px;"
-                    class="d-block w-100" alt="Slide 3">
+                <img src="<?php echo base_url('assets/images/caro3.jpeg') ?>" class="carousel-image d-block w-100"
+                    alt="Slide 3">
             </div>
         </div>
     </div>
 
+    <!-- CArousel code end  -->
+
+    <!-- Cards code 4 cards start -->
 
     <div class="container my-5">
+        <h2 class="text-center montserrat fw-bold mb-4">Shop by Brands</h2>
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <a href="" target="_blank">
-                        <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>" class="card-img-top"
-                            alt="Card 1 Image">
+                <div class="card h-100" style="border-radius: 15px;">
+                    <a href="#" target="_blank">
+                        <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>" class="card-img"
+                            alt="Card 1 Image" style="border-radius: 15px;">
                     </a>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <a href="" target="_blank">
-                        <img src="<?php echo base_url('assets/images/Wellness/Wellness.jpg') ?>" class="card-img-top"
-                            alt="Card 2 Image">
+                <div class="card h-100" style="border-radius: 15px;">
+                    <a href="#" target="_blank">
+                        <img src="<?php echo base_url('assets/images/Wellness/Wellness.jpg') ?>" class="card-img"
+                            alt="Card 2 Image" style="border-radius: 15px;">
                     </a>
-
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <a href="" target="_blank">
-                        <img src="<?php echo base_url('assets/images/science/Science_3.jpg') ?>" class="card-img-top"
-                            alt="Card 3 Image">
+                <div class="card h-100" style="border-radius: 15px;">
+                    <a href="#" target="_blank">
+                        <img src="<?php echo base_url('assets/images/science/Science_3.jpg') ?>" class="card-img"
+                            alt="Card 3 Image" style="border-radius: 15px;">
                     </a>
 
                 </div>
@@ -258,18 +294,142 @@
 
             <!-- Card 4 -->
             <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <a href="" target="_blank">
-                        <img src="<?php echo base_url('assets/images/natural/natural.jpg') ?>" class="card-img-top"
-                            alt="Card 4 Image">
+                <div class="card h-100" style="border-radius: 15px;">
+                    <a href="#" target="_blank">
+                        <img src="<?php echo base_url('assets/images/natural/natural.jpg') ?>" class="card-img"
+                            alt="Card 4 Image" style="border-radius: 15px;">
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- cards code 4 cards end -->
+
+    <div class="container my-5">
+        <h2 class="text-center montserrat fw-bold mb-4">Trending Products</h2>
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+            </li>
+        </ul>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="trending">🔥 TRENDING</div>
+                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                        class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <span class="stars">★ 4.8</span>
+                            <span>(60)</span>
+                        </div>
+                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                        <p class="card-price">₹ 299</p>
+                        <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 text-center pt-5">
+                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                        class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <span class="stars">★ 4.8</span>
+                            <span>(60)</span>
+                        </div>
+                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                        <p class="card-price">₹ 299</p>
+                        <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="trending">🔥 TRENDING</div>
+                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                        class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <span class="stars">★ 4.8</span>
+                            <span>(60)</span>
+                        </div>
+                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                        <p class="card-price">₹ 299</p>
+                        <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="trending">🔥 TRENDING</div>
+                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                        class="card-img-top" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                        <div class="d-flex justify-content-center align-items-center mb-2">
+                            <span class="stars">★ 4.8</span>
+                            <span>(60)</span>
+                        </div>
+                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                        <p class="card-price">₹ 299</p>
+                        <button class="btn add-to-cart w-100">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat the above card structure for additional cards -->
+        </div>
+    </div>
 
 
 
+    <div class="container my-5">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <p>This is the Home tab content.</p>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <p>This is the Profile tab content.</p>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <p>This is the Contact tab content.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Carousel Animation -->
     <script>
@@ -292,7 +452,10 @@
                 });
             });
         });
+
     </script>
+
+
 
 </body>
 
