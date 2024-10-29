@@ -5,6 +5,6 @@ class User extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('include/navbar');
+		$this->load->view('User/Home');
 	}
 }
