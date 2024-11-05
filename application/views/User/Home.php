@@ -148,6 +148,71 @@
             font-weight: bold;
             text-align: center;
         }
+
+        /* Custom Styles to remove background color */
+        .nav-pills .nav-link {
+            background-color: transparent;
+            /* Remove background color */
+            color: #333;
+            /* Default text color */
+            border: 1px solid #ccc;
+            /* Optional: add a light border */
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: transparent;
+            /* Transparent background for active tab */
+            color: #000;
+            /* Change active text color if needed */
+            font-weight: bold;
+            /* Optional: make active tab bold */
+            border-color: #000;
+            /* Optional: darker border on active */
+        }
+
+
+        /* Footer CSS */
+
+        .footer {
+            background-color: #111;
+            /* Dark background color */
+            color: #ccc;
+            /* Light text color */
+            padding: 40px 0;
+        }
+
+        .footer a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer .footer-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer .social-icons a {
+            color: #ccc;
+            margin-right: 10px;
+        }
+
+        .footer .social-icons a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+        }
     </style>
 </head>
 
@@ -173,31 +238,31 @@
                 <ul class="navbar-nav mx-auto mb-lg-0 montserrat ">
                     <li class="nav-item">
                         <a class="nav-link text-dark fs-5 mx-1 navStyle "
-                            href="<?php echo base_url() . 'User/UserHome'; ?>">
+                            href="<?php echo base_url() . 'User/Luxury'; ?>">
                             Luxury
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1 text-dark fs-5 navStyle"
-                            href="<?php echo base_url() . 'User/Bookings'; ?>">
+                            href="<?php echo base_url() . 'User/Natural'; ?>">
                             Natural
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1 text-dark fs-5 navStyle"
-                            href="<?php echo base_url() . 'User/Bookings'; ?>">
+                            href="<?php echo base_url() . 'User/Science'; ?>">
                             Science
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1 text-dark fs-5 navStyle"
-                            href="<?php echo base_url() . 'User/Bookings'; ?>">
+                            href="<?php echo base_url() . 'User/Wellness'; ?>">
                             Wellness
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1 text-dark fs-5 navStyle"
-                            href="<?php echo base_url() . 'User/Bookings'; ?>">
+                            href="<?php echo base_url() . 'User/Offers'; ?>">
                             Offers
                         </a>
                     </li>
@@ -311,89 +376,195 @@
     </div>
     <!-- cards code 4 cards end -->
 
-    <div class="container my-5">
-        <h2 class="text-center  montserrat fw-bold mb-4">Trending Products</h2>
+    <div class="container montserrat my-5">
+        <h2 class="text-center  fw-bold mb-4">Trending Products</h2>
 
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="card h-100 text-center">
-                    <div class="trending">🔥 TRENDING</div>
-                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
-                        class="card-img-top" alt="Product Image">
-                    <div class="card-body">
-                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
-                        <div class="d-flex justify-content-center align-items-center mb-2">
-                            <span class="stars">★ 4.8</span>
-                            <span>(60)</span>
+        <div class="container mt-4">
+            <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active border-0 fs-5" id="newly-launched-tab" data-bs-toggle="pill"
+                        data-bs-target="#newly-launched" type="button" role="tab" aria-controls="newly-launched"
+                        aria-selected="true">Newly Launched</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link border-0 fs-5" id="bestsellers-tab" data-bs-toggle="pill"
+                        data-bs-target="#bestsellers" type="button" role="tab" aria-controls="bestsellers"
+                        aria-selected="false">Bestsellers</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-3" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="newly-launched" role="tabpanel"
+                    aria-labelledby="newly-launched-tab">
+
+
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center">
+                                <div class="trending">🔥 TRENDING</div>
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                                </div>
+
+                            </div>
                         </div>
-                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
-                        <p class="card-price">₹ 299</p>
-                        <button class="btn add-to-cart w-100">ADD TO CART</button>
 
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center pt-4">
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center">
+                                <div class="trending">🔥 TRENDING</div>
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center">
+                                <div class="trending">🔥 TRENDING</div>
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repeat the above card structure for additional cards -->
                     </div>
 
                 </div>
-            </div>
+                <div class="tab-pane fade" id="bestsellers" role="tabpanel" aria-labelledby="bestsellers-tab">
 
-            <div class="col-lg-3 col-md-6">
-                <div class="card h-100 text-center pt-4">
-                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
-                        class="card-img-top" alt="Product Image">
-                    <div class="card-body">
-                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
-                        <div class="d-flex justify-content-center align-items-center mb-2">
-                            <span class="stars">★ 4.8</span>
-                            <span>(60)</span>
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center">
+                                <div class="trending">🔥 TRENDING</div>
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                                </div>
+
+                            </div>
                         </div>
-                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
-                        <p class="card-price">₹ 299</p>
-                        <button class="btn add-to-cart w-100">ADD TO CART</button>
 
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center pt-4">
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center pt-4">
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card h-100 text-center pt-4">
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                    class="card-img-top" alt="Product Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
+                                    <div class="d-flex justify-content-center align-items-center mb-2">
+                                        <span class="stars">★ 4.8</span>
+                                        <span>(60)</span>
+                                    </div>
+                                    <p class="card-text">Long lasting | Alluring | Fragrance</p>
+                                    <p class="card-price">₹ 299</p>
+                                    <button class="btn add-to-cart w-100">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Repeat the above card structure for additional cards -->
                     </div>
-
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card h-100 text-center">
-                    <div class="trending">🔥 TRENDING</div>
-                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
-                        class="card-img-top" alt="Product Image">
-                    <div class="card-body">
-                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
-                        <div class="d-flex justify-content-center align-items-center mb-2">
-                            <span class="stars">★ 4.8</span>
-                            <span>(60)</span>
-                        </div>
-                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
-                        <p class="card-price">₹ 299</p>
-                        <button class="btn add-to-cart w-100">ADD TO CART</button>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="card h-100 text-center">
-                    <div class="trending">🔥 TRENDING</div>
-                    <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
-                        class="card-img-top" alt="Product Image">
-                    <div class="card-body">
-                        <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
-                        <div class="d-flex justify-content-center align-items-center mb-2">
-                            <span class="stars">★ 4.8</span>
-                            <span>(60)</span>
-                        </div>
-                        <p class="card-text">Long lasting | Alluring | Fragrance</p>
-                        <p class="card-price">₹ 299</p>
-                        <button class="btn add-to-cart w-100">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Repeat the above card structure for additional cards -->
         </div>
+
+
     </div>
 
 
@@ -430,13 +601,70 @@
 
 
 
+    <!-- Footer Code -->
+
+
+    <div class="footer montserrat">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <h5 class="footer-title">WHO WE ARE</h5>
+                    <p class="lh-lg">Bringing you the best of Beauty with the best of results of Naturals at the best prices
+                        guaranteed with Quality.</p>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h5 class="footer-title">CATEGORIES</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#">Luxury</a></li>
+                        <li><a href="#">Natural</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Wellness</a></li>
+                        <li><a href="#">Offers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h5 class="footer-title">ORDERS</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h5 class="footer-title">IMPORTANT LINKS</h5>
+                    <ul class="list-unstyled lh-lg">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-2 col-sm-6 mb-4">
+                    <h5 class="footer-title">FOLLOW US ON:</h5>
+                    <div class="social-icons mt-3 lh-lg fs-3">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom mt-4" style="font-size:16px;">
+                <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+                <br>
+                &copy; Fragnance Private Limited 2024. All Rights Reserved
+            </div>
+        </div>
+    </div>
 
 
 
 
 
 
-    
+
+
+
     <!-- Carousel Animation -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
