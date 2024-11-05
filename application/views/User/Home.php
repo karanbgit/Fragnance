@@ -117,7 +117,7 @@
             padding: 3px 8px;
             border-radius: 5px;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
         .card-price {
@@ -141,6 +141,12 @@
         .stars {
             color: #ffa500;
             margin-right: 5px;
+        }
+
+
+        .card-title {
+            font-weight: bold;
+            text-align: center;
         }
     </style>
 </head>
@@ -306,21 +312,10 @@
     <!-- cards code 4 cards end -->
 
     <div class="container my-5">
-        <h2 class="text-center montserrat fw-bold mb-4">Trending Products</h2>
-
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-            </li>
-        </ul>
+        <h2 class="text-center  montserrat fw-bold mb-4">Trending Products</h2>
 
         <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
+            <div class="col-lg-3 col-md-6">
                 <div class="card h-100 text-center">
                     <div class="trending">🔥 TRENDING</div>
                     <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
@@ -340,8 +335,8 @@
                 </div>
             </div>
 
-            <div class="col">
-                <div class="card h-100 text-center pt-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 text-center pt-4">
                     <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
                         class="card-img-top" alt="Product Image">
                     <div class="card-body">
@@ -359,7 +354,7 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col-lg-3 col-md-6">
                 <div class="card h-100 text-center">
                     <div class="trending">🔥 TRENDING</div>
                     <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
@@ -379,7 +374,7 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col-lg-3 col-md-6">
                 <div class="card h-100 text-center">
                     <div class="trending">🔥 TRENDING</div>
                     <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
@@ -402,35 +397,46 @@
     </div>
 
 
+    <div class="container mt-5 d-flex montserrat justify-content-center align-items-center">
+        <div class="row ">
+            <h5 class="card-title mb-4 fs-2 ">Fragrance Code</h5>
 
-    <div class="container my-5">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                    type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                <p>This is the Home tab content.</p>
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card border-0" style="width: 170px;">
+                    <div class="card-body text-center">
+                        <img src="<?php echo base_url() . 'assets/images/code/Group_small.webp' ?>" alt="">
+                        <p class="card-text fw-bold mt-3">Cruelty Free</p>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <p>This is the Profile tab content.</p>
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card border-0" style="width: 170px;">
+                    <div class="card-body text-center">
+                        <img src="<?php echo base_url() . 'assets/images/code/Frame_small.webp' ?>" alt="">
+                        <p class="card-text fw-bold mt-3">Vegan</p>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <p>This is the Contact tab content.</p>
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card border-0" style="width: 170px;">
+                    <div class="card-body text-center">
+                        <img src="<?php echo base_url() . 'assets/images/code/Frame_1_small.webp' ?>" alt="">
+                        <p class="card-text fw-bold mt-3">Pure Ingredients</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+
+
+
+
+
+
+
+
+    
     <!-- Carousel Animation -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
