@@ -7,4 +7,33 @@ class User extends CI_Controller {
 	{
 		$this->load->view('User/Home');
 	}
+
+	public function login()
+	{
+		$this->load->view('User/Login');
+	}
+
+	public function register()
+	{
+		$this->load->view('User/Register');
+	}
+
+	public function forgotPassword()
+	{
+		$this->load->view('User/ForgotPassword');
+	}
+
+	public function profile()
+	{
+		$this->load->view('User/Profile');
+	}	
+
+	public function logout()
+	{
+		$this->load->view('User/Logout');
+	}
+
+
+	
+
 }

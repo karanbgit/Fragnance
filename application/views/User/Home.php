@@ -221,7 +221,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav ">
         <div class="container">
             <!-- logo -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?php echo base_url() . 'User/index'; ?>">
                 <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" width="70" height="70">
             </a>
 
@@ -287,8 +287,7 @@
                         <i class="fa-solid fa-user fa-xl text-dark"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
-                        <a class="dropdown-item" href="<?php echo base_url() . 'User/UserProfile'; ?>">Profile</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="<?php echo base_url() . 'User/UserProfile'; ?>">Login</a>
                     </div>
                 </div>
 
@@ -375,6 +374,9 @@
         </div>
     </div>
     <!-- cards code 4 cards end -->
+
+
+    <!-- Trending Products Code  -->
 
     <div class="container montserrat my-5">
         <h2 class="text-center  fw-bold mb-4">Trending Products</h2>
@@ -486,7 +488,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="card h-100 text-center">
                                 <div class="trending">🔥 TRENDING</div>
-                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OG_Luxury_Pack_of_4_15ml_Elite_Aura_Listing_Image_1.jpg' ?>"
                                     class="card-img-top" alt="Product Image">
                                 <div class="card-body">
                                     <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
@@ -505,7 +507,7 @@
 
                         <div class="col-lg-3 col-md-6">
                             <div class="card h-100 text-center pt-4">
-                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OG_Luxury_Pack_of_4_15ml_Elite_Aura_Listing_Image_1.jpg' ?>"
                                     class="card-img-top" alt="Product Image">
                                 <div class="card-body">
                                     <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
@@ -524,7 +526,7 @@
 
                         <div class="col-lg-3 col-md-6">
                             <div class="card h-100 text-center pt-4">
-                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OG_Luxury_Pack_of_4_15ml_Elite_Aura_Listing_Image_1.jpg' ?>"
                                     class="card-img-top" alt="Product Image">
                                 <div class="card-body">
                                     <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
@@ -543,7 +545,7 @@
 
                         <div class="col-lg-3 col-md-6">
                             <div class="card h-100 text-center pt-4">
-                                <img src="<?php echo base_url() . 'assets/images/tranding/OGLuxuryPerfumeSmokey.jpg' ?>"
+                                <img src="<?php echo base_url() . 'assets/images/tranding/OG_Luxury_Pack_of_4_15ml_Elite_Aura_Listing_Image_1.jpg' ?>"
                                     class="card-img-top" alt="Product Image">
                                 <div class="card-body">
                                     <h5 class="card-title">OG BEAUTY Luxury Gallant Eau De Parfum 50ml</h5>
@@ -567,6 +569,8 @@
 
     </div>
 
+
+    <!-- Fragrance Code -->
 
     <div class="container mt-5 d-flex montserrat justify-content-center align-items-center">
         <div class="row ">
@@ -600,17 +604,15 @@
     </div>
 
 
-
     <!-- Footer Code -->
-
 
     <div class="footer montserrat">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-6 mb-4">
                     <h5 class="footer-title">WHO WE ARE</h5>
-                    <p class="lh-lg">Bringing you the best of Beauty with the best of results of Naturals at the best prices
-                        guaranteed with Quality.</p>
+                    <p class="lh-lg">Bringing you the best of Beauty with the best of results of Naturals at the best
+                        prices guaranteed with Quality.</p>
                 </div>
                 <div class="col-md-2 col-sm-6 mb-4">
                     <h5 class="footer-title">CATEGORIES</h5>
@@ -625,7 +627,7 @@
                 <div class="col-md-2 col-sm-6 mb-4">
                     <h5 class="footer-title">ORDERS</h5>
                     <ul class="list-unstyled lh-lg">
-                        <li><a href="#">Account</a></li>
+                        <li><a href="<?php echo base_url('User/login') ?>">Account</a></li>
                         <li><a href="#">Track Order</a></li>
                         <li><a href="#">Shipping Policy</a></li>
                     </ul>
@@ -658,13 +660,6 @@
     </div>
 
 
-
-
-
-
-
-
-
     <!-- Carousel Animation -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -688,7 +683,6 @@
         });
 
     </script>
-
 
 
 </body>
