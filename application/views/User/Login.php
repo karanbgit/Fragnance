@@ -32,7 +32,7 @@
     <style>
         /* Login button CSS */
         .login-container {
-            max-width: 400px;
+            max-width: 500px;
             margin: 50px auto;
             padding: 20px;
             text-align: center;

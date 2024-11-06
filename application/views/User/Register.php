@@ -33,7 +33,7 @@
         /* Register button CSS */
 
         .register-container {
-            max-width: 400px;
+            max-width: 500px;
             margin: 50px auto;
             padding: 20px;
             text-align: center;
@@ -91,7 +91,7 @@
 
 </head>
 
-<body>
+<body class="montserrat">
 
     <!-- Navbar Code Include  -->
     <?php $this->load->view('include/Navbar'); ?>
@@ -126,7 +126,7 @@
             </div>
 
             <button type="submit" class="btn btn-create">Create now</button>
-            <button type="button" class="btn btn-login">Login</button>
+            <a href="<?php echo base_url() . 'User/Login'; ?>"><button type="button" class="btn btn-login">Login</button></a>
         </form>
     </div>
 
