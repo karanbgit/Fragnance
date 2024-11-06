@@ -92,7 +92,8 @@
             </div>
         </div>
         <div class="footer-bottom mt-4" style="font-size:16px;">
-            <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a>
+            <a href="<?php echo base_url('User/TermsAndConditions') ?>">Terms & Conditions</a> | <a
+                href="<?php echo base_url('User/PrivacyPolicy') ?>">Privacy Policy</a>
             <br>
             &copy; Fragnance Private Limited 2024. All Rights Reserved
         </div>
