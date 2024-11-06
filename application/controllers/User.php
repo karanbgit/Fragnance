@@ -23,10 +23,32 @@ class User extends CI_Controller {
 		$this->load->view('User/ForgotPassword');
 	}
 
-	public function profile()
+	public function AboutUs()
 	{
-		$this->load->view('User/Profile');
+		$this->load->view('User/AboutUs');
+	}
+
+	public function ContactUs()
+	{
+		$this->load->view('User/ContactUs');
+	}
+
+	public function TermsAndConditions()
+	{
+		$this->load->view('User/TermsAndConditions');
 	}	
+
+	public function PrivacyPolicy()
+	{
+		$this->load->view('User/PrivacyPolicy');
+	}	
+
+	public function ReturnAndRefundPolicy()
+	{
+		$this->load->view('User/ReturnAndRefundPolicy');
+	}
+
+	
 
 	public function logout()
 	{
