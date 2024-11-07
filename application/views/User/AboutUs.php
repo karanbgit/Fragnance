@@ -43,7 +43,7 @@
     <div class="container">
         <h1 class="montserrat text-center my-5 fw-bold">About Us</h1>
         <div class="row mb-5">
-            <div class="col-md-8 mx-auto" style="text-align: justify;">
+            <div class="col-md-9 mx-auto" style="text-align: justify;">
                 <p class="montserrat lh-lg">Presenting Fragnance, your one-stop destination for high-quality beauty and
                     personal care products at prices that won't break the bank. We're dedicated to helping you look and
                     without emptying your wallet.
