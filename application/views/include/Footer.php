@@ -69,7 +69,7 @@
                 <ul class="list-unstyled lh-lg">
                     <li><a href="<?php echo base_url('User/login') ?>">Account</a></li>
                     <li><a href="#">Track Order</a></li>
-                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="<?php echo base_url('User/ShippingPolicy') ?>">Shipping Policy</a></li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-6 mb-4">
@@ -86,8 +86,8 @@
             <div class="col-md-2 col-sm-6 mb-4">
                 <h5 class="footer-title">FOLLOW US ON:</h5>
                 <div class="social-icons mt-3 lh-lg fs-3">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/fragnance.in" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fragnance.in" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>

@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class User extends CI_Controller {
+class User extends CI_Controller
+{
 
 	public function index()
 	{
@@ -36,19 +37,23 @@ class User extends CI_Controller {
 	public function TermsAndConditions()
 	{
 		$this->load->view('User/TermsAndConditions');
-	}	
+	}
 
 	public function PrivacyPolicy()
 	{
 		$this->load->view('User/PrivacyPolicy');
-	}	
+	}
 
 	public function ReturnAndRefundPolicy()
 	{
 		$this->load->view('User/ReturnAndRefundPolicy');
 	}
 
-	
+	public function ShippingPolicy()
+	{
+		$this->load->view('User/ShippingPolicy');
+	}
+
 
 	public function logout()
 	{
@@ -56,6 +61,6 @@ class User extends CI_Controller {
 	}
 
 
-	
+
 
 }
