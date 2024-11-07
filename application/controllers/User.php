@@ -54,6 +54,11 @@ class User extends CI_Controller
 		$this->load->view('User/ShippingPolicy');
 	}
 
+	public function TrackOrder()
+	{
+		$this->load->view('User/TrackOrder');
+	}
+
 
 	public function logout()
 	{

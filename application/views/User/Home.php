@@ -38,7 +38,7 @@
             font-style: normal;
         }
 
-      
+
 
 
         /* Card CSS */
@@ -114,9 +114,6 @@
             border-color: #000;
             /* Optional: darker border on active */
         }
-
-
-    
     </style>
 </head>
 
@@ -131,17 +128,19 @@
         <!-- Carousel Items -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="<?php echo base_url('assets/images/caro1.jpeg') ?>" class="carousel-image d-block w-100"
-                    alt="Slide 1">
-            </div>
-            <div class="carousel-item">
-                <img src="<?php echo base_url('assets/images/caro2.jpeg') ?>" class="carousel-image d-block w-100"
-                    alt="Slide 2">
-            </div>
-            <div class="carousel-item">
-                <img src="<?php echo base_url('assets/images/caro3.jpeg') ?>" class="carousel-image d-block w-100"
+                <img src="<?php echo base_url('assets/images/caro3.png') ?>" class="carousel-image d-block w-100"
                     alt="Slide 3">
             </div>
+            <div class="carousel-item">
+                <img src="<?php echo base_url('assets/images/caro2.png') ?>" class="carousel-image d-block w-100"
+                    alt="Slide 2">
+            </div>
+            <div class="carousel-item ">
+                <img src="<?php echo base_url('assets/images/caro1.png') ?>" class="carousel-image d-block w-100"
+                    alt="Slide 1">
+            </div>
+
+
         </div>
     </div>
 

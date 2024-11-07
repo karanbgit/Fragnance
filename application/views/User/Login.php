@@ -27,7 +27,7 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <title>Account | Fragnance</title>
+    <title>Fragnance | Account </title>
 
     <style>
         /* Login button CSS */
