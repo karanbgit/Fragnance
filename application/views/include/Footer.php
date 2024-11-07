@@ -68,7 +68,7 @@
                 <h5 class="footer-title">ORDERS</h5>
                 <ul class="list-unstyled lh-lg">
                     <li><a href="<?php echo base_url('User/login') ?>">Account</a></li>
-                    <li><a href="#">Track Order</a></li>
+                    <li><a href="<?php echo base_url('User/TrackOrder') ?>">Track Order</a></li>
                     <li><a href="<?php echo base_url('User/ShippingPolicy') ?>">Shipping Policy</a></li>
                 </ul>
             </div>
