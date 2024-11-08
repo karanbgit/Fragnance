@@ -59,13 +59,28 @@ class User extends CI_Controller
 		$this->load->view('User/TrackOrder');
 	}
 
-
 	public function logout()
 	{
 		$this->load->view('User/Logout');
 	}
 
+	public function Luxury()
+	{
+		$this->load->view('User/Luxury');
+	}
 
+	public function Natural()
+	{
+		$this->load->view('User/Natural');
+	}
 
+	public function Science()
+	{
+		$this->load->view('User/Science');
+	}
 
+	public function Wellness()
+	{
+		$this->load->view('User/Wellness');
+	}
 }

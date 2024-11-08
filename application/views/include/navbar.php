@@ -1,6 +1,5 @@
 <!-- navbar section -->
 
-
 <style>
     .montserrat {
         font-family: "Montserrat", sans-serif;

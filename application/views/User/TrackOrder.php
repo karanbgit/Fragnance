@@ -82,12 +82,45 @@
             color: #fff;
             font-weight: bold;
             border-radius: 0;
-            width: 25%;
+            width: auto;
             padding: 5px;
 
         }
 
         .btn-address:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s;
+            border: 1px solid #000;
+        }
+
+        .btn-add-address {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 0;
+            width: auto;
+            padding: 5px;
+
+        }
+
+        .btn-add-address:hover {
+            transform: scale(1.01);
+            transition: transform 0.3s;
+            border: 1px solid #000;
+        }
+
+
+        .btn-cancel {
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 0;
+            width: auto;
+            padding: 5px;
+
+        }
+
+        .btn-cancel:hover {
             transform: scale(1.01);
             transition: transform 0.3s;
             border: 1px solid #000;
@@ -137,9 +170,9 @@
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel"
                             aria-labelledby="v-pills-dashboard-tab">
-                            <p class="fs-5">Hello, Karan</p>
-                            <div class="fs-4 my-5"><strong>Order History</strong></div>
-                            <div class="fs-4 my-4"><strong>Account details</strong></div>
+                            <p class="fs-5 mt-4">Hello, Karan</p>
+                            <div class="fs-4 my-4"><strong>Order History</strong></div>
+                            <div class="fs-4 my-3"><strong>Account details</strong></div>
 
                             <form action="">
                                 <div class="lh-lg" style="font-size: 1rem;">
@@ -164,10 +197,12 @@
                             aria-labelledby="v-pills-address-tab">
 
                             <!-- Button to Add a New Address -->
-                            <a href="#" class="btn btn-address my-5" id="add-address-btn">Add a New Address</a>
+                            <!-- Add count of address you store in data base -->
+                            <div class="fs-4 mt-4"><strong>Your Address (0)</strong></div>
+                            <a href="#" class="btn btn-address my-4" id="add-address-btn">Add a New Address</a>
 
                             <!-- Form hidden initially -->
-                            <div id="address-form" style="display: none;">
+                            <div id="address-form" class="mb-5" style="display: none;">
                                 <form>
                                     <div class="mb-3">
                                         <label for="first-name" class="form-label">First Name</label>
@@ -182,6 +217,11 @@
                                         <input type="text" class="form-control" id="address" required>
                                     </div>
                                     <div class="mb-3">
+                                        <label for="country" class="form-label">Country</label>
+                                        <input type="text" class="form-control" id="country" placeholder="India"
+                                            readonly>
+                                    </div>
+                                    <div class="mb-3">
                                         <label for="state" class="form-label">State</label>
                                         <input type="text" class="form-control" id="state" required>
                                     </div>
@@ -189,7 +229,18 @@
                                         <label for="city" class="form-label">City</label>
                                         <input type="text" class="form-control" id="city" required>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <div class="mb-3">
+                                        <label for="pincode" class="form-label">Pincode</label>
+                                        <input type="text" class="form-control" id="pincode" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="text" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="d-flex flex-row gap-3">
+                                        <button type="submit" class="btn btn-add-address">Submit</button>
+                                        <button type="button" class="btn btn-cancel">Cancel</button>
+                                    </div>
                                 </form>
                             </div>
 

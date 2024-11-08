@@ -38,9 +38,6 @@
             font-style: normal;
         }
 
-
-
-
         /* Card CSS */
 
         .card-img {
@@ -124,7 +121,7 @@
     <?php $this->load->view('include/Navbar'); ?>
 
     <!-- Carousel Code start -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <!-- Carousel Items -->
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -156,7 +153,7 @@
                 <div class="card h-100" style="border-radius: 15px;">
                     <a href="#" target="_blank">
                         <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>" class="card-img"
-                            alt="Card 1 Image" style="border-radius: 15px;">
+                            alt="Card 2 Image" style="border-radius: 15px;">
                     </a>
                 </div>
             </div>
