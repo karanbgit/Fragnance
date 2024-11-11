@@ -80,7 +80,7 @@
 
         .filter-divider {
             border-top: 1px solid #ddd;
-            margin: 20px 0;
+            margin: 10px 0;
         }
 
         .filter-section input[type="range"] {
@@ -116,6 +116,7 @@
         .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
 
         .product-card img {
@@ -171,6 +172,23 @@
             background-color: #333;
             color: #ff5c00;
         }
+
+        /* Nav pills csss  */
+
+        /* Remove background color from nav links */
+        .nav-pills .nav-link {
+            background-color: transparent;
+            color: black;
+        }
+
+        /* Optional: To remove background color only on the active tab */
+        .nav-pills .nav-link.active {
+            background-color: transparent;
+            color: black;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-left: 3px solid black;
+        }
     </style>
 </head>
 
@@ -181,12 +199,18 @@
     <?php $this->load->view('include/Navbar'); ?>
 
 
+    <!-- Background Image -->
+    <div class="image-fluid">
+        <img src="<?php echo base_url('assets/images/Luxury/bg_luxury.png') ?>"
+            class="carousel-image image-fluid d-block w-100" alt="Slide 3">
+    </div>
+
+
     <!-- Luxury Code Start  -->
     <div class="container my-5">
         <div class="row">
             <!-- Sidebar Filter Section -->
-            <!-- Sidebar Filter Section -->
-            <div class="col-12 col-md-3 mb-4">
+            <div class="col-12 col-md-3 mb-4 mt-5">
                 <div class="filter-title">Filter</div>
                 <hr>
                 <div class="filter-section">
@@ -196,11 +220,12 @@
                         <h6>Availability</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="inStock">
-                            <label class="form-check-label" for="inStock">In stock (28)</label>
+                            <label class="form-check-label" style="font-size: 16px;" for="inStock">In stock (28)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="outOfStock">
-                            <label class="form-check-label" for="outOfStock">Out of stock (02)</label>
+                            <label class="form-check-label" style="font-size: 16px;" for="outOfStock">Out of stock
+                                (02)</label>
                         </div>
                     </div>
 
@@ -225,29 +250,120 @@
                         <h6>Product Type</h6>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="luxuryParfum">
-                            <label class="form-check-label" for="luxuryParfum">Luxury Parfum (23)</label>
+                            <label class="form-check-label" style="font-size: 16px;" for="luxuryParfum">Luxury Parfum
+                                (23)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="mensPerfume">
-                            <label class="form-check-label" for="mensPerfume">Men's Perfume (11)</label>
+                            <label class="form-check-label" style="font-size: 16px; " for="mensPerfume">Men's Perfume
+                                (11)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="womensPerfume">
-                            <label class="form-check-label" for="womensPerfume">Women's Perfume (09)</label>
+                            <label class="form-check-label" style="font-size: 16px;" for="womensPerfume">Women's Perfume
+                                (09)</label>
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <!-- Product Grid Section -->
-            <div class="col-12 col-md-9">
+            <div class="col-12 col-md-9 ">
+                <div class="row mb-5">
+                    <ul class="nav nav-pills d-flex justify-content-center" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" href="<?php echo base_url('User/Luxury') ?>">All Products</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="<?php echo base_url('User/ForMen') ?>">Men's Perfume</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="<?php echo base_url('User/ForWomen') ?>">Women's Perfume</a>
+                        </li>
+                    </ul>
+                    <div class="row mt-5">
+                        <!-- Product Card 1 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <span class="badge-trending">TRENDING</span>
+                                <img src="<?php echo base_url('assets/images/tranding/LuxuryPerfumeShadowPI_2_2.jpg') ?>"
+                                    alt="Gallant Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
+                                    alt="Shadow Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <span class="badge-trending">TRENDING</span>
+                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryWoodyPerfumePI_2_2.jpg') ?>"
+                                    alt="Woody Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
                 <div class="row">
+                    <!-- Product Card 3 -->
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="product-card">
+                            <span class="badge-trending">TRENDING</span>
+                            <img src="<?php echo base_url('assets/images/tranding/OGLuxuryWoodyPerfumePI_2_2.jpg') ?>"
+                                alt="Woody Perfume">
+                            <div class="product-info">
+                                <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <span class="product-price">₹349</span>
+                                    <span class="product-discount">₹399</span>
+                                </div>
+                                <button class="btn add-to-cart-btn">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <!-- Product Card 1 -->
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="product-card">
                             <span class="badge-trending">TRENDING</span>
-                            <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>"
+                            <img src="<?php echo base_url('assets/images/tranding/LuxuryPerfumeShadowPI_2_2.jpg') ?>"
                                 alt="Gallant Perfume">
                             <div class="product-info">
                                 <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
@@ -263,7 +379,30 @@
                     <!-- Product Card 2 -->
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="product-card">
-                            <img src="path/to/your/image2.jpg" alt="Shadow Perfume">
+                            <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
+                                alt="Shadow Perfume">
+                            <div class="product-info">
+                                <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <span class="product-price">₹349</span>
+                                    <span class="product-discount">₹399</span>
+                                </div>
+                                <button class="btn add-to-cart-btn">ADD TO CART</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+                <div class="row">
+                    <!-- Product Card 2 -->
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="product-card">
+                            <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
+                                alt="Shadow Perfume">
                             <div class="product-info">
                                 <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
                                 <div class="d-flex justify-content-center align-items-center">
@@ -279,7 +418,8 @@
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="product-card">
                             <span class="badge-trending">TRENDING</span>
-                            <img src="path/to/your/image3.jpg" alt="Woody Perfume">
+                            <img src="<?php echo base_url('assets/images/tranding/OGLuxuryWoodyPerfumePI_2_2.jpg') ?>"
+                                alt="Woody Perfume">
                             <div class="product-info">
                                 <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
                                 <div class="d-flex justify-content-center align-items-center">
@@ -292,12 +432,11 @@
                     </div>
 
 
-
                     <!-- Product Card 1 -->
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="product-card">
                             <span class="badge-trending">TRENDING</span>
-                            <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>"
+                            <img src="<?php echo base_url('assets/images/tranding/LuxuryPerfumeShadowPI_2_2.jpg') ?>"
                                 alt="Gallant Perfume">
                             <div class="product-info">
                                 <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
@@ -310,49 +449,15 @@
                         </div>
                     </div>
 
-
-                    <!-- Product Card 1 -->
-                    <div class="col-12 col-sm-6 col-md-4 mb-4">
-                        <div class="product-card">
-                            <span class="badge-trending">TRENDING</span>
-                            <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>"
-                                alt="Gallant Perfume">
-                            <div class="product-info">
-                                <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <span class="product-price">₹349</span>
-                                    <span class="product-discount">₹399</span>
-                                </div>
-                                <button class="btn add-to-cart-btn">ADD TO CART</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <!-- Product Card 1 -->
-                    <div class="col-12 col-sm-6 col-md-4 mb-4">
-                        <div class="product-card">
-                            <img src="<?php echo base_url('assets/images/Luxury/Luxury_1-min.jpg') ?>"
-                                alt="Gallant Perfume">
-                            <div class="product-info">
-                                <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <span class="product-price">₹349</span>
-                                    <span class="product-discount">₹399</span>
-                                </div>
-                                <button class="btn add-to-cart-btn">ADD TO CART</button>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
+
             </div>
+
+
+
         </div>
     </div>
-
-
 
 
     <!-- Footer Code Include  -->

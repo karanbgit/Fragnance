@@ -69,6 +69,16 @@ class User extends CI_Controller
 		$this->load->view('User/Luxury');
 	}
 
+	public function ForMen()
+	{
+		$this->load->view('User/ForMen');
+	}
+
+	public function ForWomen()
+	{
+		$this->load->view('User/ForWomen');
+	}
+
 	public function Natural()
 	{
 		$this->load->view('User/Natural');
