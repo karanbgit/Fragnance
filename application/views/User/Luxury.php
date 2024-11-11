@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/images/fevicon/favicon.png') ?>">
 
@@ -37,74 +37,57 @@
     <style>
         /* Custom Styles for Filter Section */
         .filter-section {
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #dee2e6;
         }
 
         .filter-title {
-            font-weight: bold;
-            color: #333;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .price-label {
+            font-size: 14px;
+        }
+
+        .price-range-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-input {
+            width: 70px;
             text-align: center;
+            font-size: 14px;
         }
 
-        .filter-category {
-            border-top: 1px solid #ddd;
-            padding: 15px 0;
-        }
-
-        .filter-category:first-of-type {
-            border-top: none;
-        }
-
-        .filter-category h6 {
-            font-size: 1rem;
-            color: #444;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        .form-check-label {
-            font-size: 0.9rem;
-            color: #555;
-            cursor: pointer;
-        }
-
-        .price-range {
-            color: #333;
-            font-weight: bold;
-        }
-
-        .filter-divider {
-            border-top: 1px solid #ddd;
-            margin: 10px 0;
-        }
-
-        .filter-section input[type="range"] {
-            -webkit-appearance: none;
+        .range-slider {
+            position: relative;
             width: 100%;
-            height: 8px;
-            background: #ddd;
-            outline: none;
-            opacity: 0.8;
-            transition: opacity 0.2s;
         }
 
-        .filter-section input[type="range"]::-webkit-slider-thumb {
+        .range-slider input[type="range"] {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
             -webkit-appearance: none;
             appearance: none;
+        }
+
+        .range-slider input[type="range"]::-webkit-slider-thumb {
+            pointer-events: all;
             width: 20px;
             height: 20px;
-            background-color: #ff5c00;
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #007bff;
             border-radius: 50%;
-            cursor: pointer;
         }
 
         .product-card {
@@ -217,56 +200,50 @@
             <div class="col-12 col-md-3 mb-4 mt-5">
                 <div class="filter-title">Filter</div>
                 <hr>
+                <!-- Availability Filter -->
                 <div class="filter-section">
-
-                    <!-- Availability Filter -->
-                    <div class="filter-category">
-                        <h6>Availability</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="inStock">
-                            <label class="form-check-label" style="font-size: 16px;" for="inStock">In stock (28)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="outOfStock">
-                            <label class="form-check-label" style="font-size: 16px;" for="outOfStock">Out of stock
-                                (02)</label>
-                        </div>
+                    <div class="filter-title">Availability</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inStock">
+                        <label class="form-check-label" for="inStock">In stock (08)</label>
                     </div>
-
-                    <!-- Divider -->
-                    <div class="filter-divider"></div>
-
-                    <!-- Price Filter -->
-                    <div class="filter-category">
-                        <h6>Price</h6>
-                        <input type="range" class="form-range" min="0" max="999">
-                        <div class="d-flex justify-content-between price-range">
-                            <span>₹0</span>
-                            <span>₹999</span>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="outOfStock">
+                        <label class="form-check-label" for="outOfStock">Out of stock (02)</label>
                     </div>
+                </div>
 
-                    <!-- Divider -->
-                    <div class="filter-divider"></div>
+                <!-- Price Filter -->
+                <div class="filter-section">
+                    <div class="filter-title">Price</div>
+                    <div class="price-range-container">
+                        <span class="price-label">From ₹</span>
+                        <input type="number" class="form-control price-input" value="0" min="0" max="999"
+                            id="priceFrom">
+                        <span class="price-label">To ₹</span>
+                        <input type="number" class="form-control price-input" value="999" min="0" max="999"
+                            id="priceTo">
+                    </div>
+                    <div class="range-slider py-4">
+                        <input type="range" class="form-range d-none" min="0" max="999" value="0" id="minRange">
+                        <input type="range" class="form-range" min="0" max="999" value="999" id="maxRange">
+                    </div>
+                </div>
 
-                    <!-- Product Type Filter -->
-                    <div class="filter-category">
-                        <h6>Product Type</h6>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="luxuryParfum">
-                            <label class="form-check-label" style="font-size: 16px;" for="luxuryParfum">Luxury Parfum
-                                (23)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="mensPerfume">
-                            <label class="form-check-label" style="font-size: 16px; " for="mensPerfume">Men's Perfume
-                                (11)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="womensPerfume">
-                            <label class="form-check-label" style="font-size: 16px;" for="womensPerfume">Women's Perfume
-                                (09)</label>
-                        </div>
+                <!-- Product Type Filter -->
+                <div class="filter-section">
+                    <div class="filter-title">Product Type</div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="combo">
+                        <label class="form-check-label" for="combo">Combo (01)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="wellness">
+                        <label class="form-check-label" for="wellness">Wellness (06)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="easySleepTablets">
+                        <label class="form-check-label" for="easySleepTablets">Easy Sleep Tablets (01)</label>
                     </div>
                 </div>
             </div>
@@ -350,6 +327,64 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
+    <script>
+        const minRange = document.getElementById('minRange');
+        const maxRange = document.getElementById('maxRange');
+        const priceFrom = document.getElementById('priceFrom');
+        const priceTo = document.getElementById('priceTo');
+
+        // Update the inputs when the range sliders change
+        minRange.addEventListener('input', () => {
+            let minValue = parseInt(minRange.value);
+            let maxValue = parseInt(maxRange.value);
+
+            if (minValue >= maxValue) {
+                minRange.value = maxValue - 1; // Prevent overlap
+                minValue = maxValue - 1;
+            }
+
+            priceFrom.value = minValue;
+        });
+
+        maxRange.addEventListener('input', () => {
+            let minValue = parseInt(minRange.value);
+            let maxValue = parseInt(maxRange.value);
+
+            if (maxValue <= minValue) {
+                maxRange.value = minValue + 1; // Prevent overlap
+                maxValue = minValue + 1;
+            }
+
+            priceTo.value = maxValue;
+        });
+
+        // Update the range sliders when the number inputs change
+        priceFrom.addEventListener('input', () => {
+            let minValue = parseInt(priceFrom.value);
+            let maxValue = parseInt(priceTo.value);
+
+            if (minValue >= maxValue) {
+                priceFrom.value = maxValue - 1;
+                minValue = maxValue - 1;
+            }
+
+            minRange.value = minValue;
+        });
+
+        priceTo.addEventListener('input', () => {
+            let minValue = parseInt(priceFrom.value);
+            let maxValue = parseInt(priceTo.value);
+
+            if (maxValue <= minValue) {
+                priceTo.value = minValue + 1;
+                maxValue = minValue + 1;
+            }
+
+            maxRange.value = maxValue;
+        });
+    </script>
 
 </body>
 

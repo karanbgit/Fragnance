@@ -93,4 +93,9 @@ class User extends CI_Controller
 	{
 		$this->load->view('User/Wellness');
 	}
+
+	public function Offers()
+	{
+		$this->load->view('User/Offers');
+	}
 }

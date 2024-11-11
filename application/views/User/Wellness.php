@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/images/fevicon/favicon.png') ?>">
 
@@ -32,10 +31,9 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <title>Fragnance | Collection For Women</title>
+    <title>Fragnance | Wellness</title>
 
     <style>
-        /* Custom Styles for Filter Section */
         .filter-section {
             background-color: #f8f9fa;
             padding: 15px;
@@ -186,12 +184,12 @@
     <?php $this->load->view('include/Navbar'); ?>
 
 
-    <!-- Luxury Code Start  -->
+    <!-- Wellness Code Start  -->
     <div class="container my-5">
         <div class="row">
             <!-- Sidebar Filter Section -->
-            <div class="col-12 col-md-3 mb-4 mt-5">
-                <div class="filter-title">Filter</div>
+            <div class="col-12 col-md-3 mb-4 mt-3">
+                <div class="filter-title text-center fs-3">Filter</div>
                 <hr>
                 <!-- Availability Filter -->
                 <div class="filter-section">
@@ -219,7 +217,7 @@
                     </div>
                     <div class="range-slider py-4">
                         <input type="range" class="form-range d-none" min="0" max="999" value="0" id="minRange">
-                        <input type="range" class="form-range" min="0" max="999" value="999" id="maxRange">
+                        <input type="range" class="form-range" min="0" max="999" value="999" id="maxRange" >
                     </div>
                 </div>
 
@@ -243,59 +241,13 @@
 
             <!-- Product Grid Section -->
             <div class="col-12 col-md-9 ">
-                <div class="row mb-4">
-
-                    <ul class="nav nav-pills d-flex justify-content-center" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="<?php echo base_url('User/Luxury') ?>">All Products</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link " href="<?php echo base_url('User/ForMen') ?>">Men's Perfume</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="<?php echo base_url('User/ForWomen') ?>">Women's
-                                Perfume</a>
-                        </li>
-                    </ul>
+                <div class="row mb-5">
                     <div class="row mt-5">
-
-                        <!-- Product Card 2 -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="product-card">
-                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
-                                    alt="Shadow Perfume">
-                                <div class="product-info">
-                                    <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <span class="product-price">₹349</span>
-                                        <span class="product-discount">₹399</span>
-                                    </div>
-                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Product Card 3 -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="product-card">
-                                <span class="badge-trending">TRENDING</span>
-                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryWoodyPerfumePI_2_2.jpg') ?>"
-                                    alt="Woody Perfume">
-                                <div class="product-info">
-                                    <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <span class="product-price">₹349</span>
-                                        <span class="product-discount">₹399</span>
-                                    </div>
-                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Product Card 1 -->
                         <div class="col-12 col-sm-6 col-md-4 mb-4">
                             <div class="product-card">
                                 <span class="badge-trending">TRENDING</span>
-                                <img src="<?php echo base_url('assets/images/tranding/LuxuryPerfumeShadowPI_2_2.jpg') ?>"
+                                <img src="<?php echo base_url('assets/images/Wellness/wellness_pro1.png') ?>"
                                     alt="Gallant Perfume">
                                 <div class="product-info">
                                     <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
@@ -308,8 +260,39 @@
                             </div>
                         </div>
 
-                    </div>
+                        <!-- Product Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <img src="<?php echo base_url('assets/images/Wellness/wellness_pro1.png') ?>"
+                                    alt="Shadow Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Product Card 3 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <span class="badge-trending">TRENDING</span>
+                                <img src="<?php echo base_url('assets/images/Wellness/wellness_pro1.png') ?>"
+                                    alt="Woody Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,7 +305,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    
+
+
     <script>
         const minRange = document.getElementById('minRange');
         const maxRange = document.getElementById('maxRange');
@@ -379,7 +363,6 @@
             maxRange.value = maxValue;
         });
     </script>
-
 </body>
 
 </html>
