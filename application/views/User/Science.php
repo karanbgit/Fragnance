@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/images/fevicon/favicon.png') ?>">#
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/images/fevicon/favicon.png') ?>">
 
-    
     <!-- Bootstrap CDN Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -33,7 +31,7 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <title>Fragnance | Collection For Men</title>
+    <title>Fragnance | Science</title>
 
     <style>
         /* Custom Styles for Filter Section */
@@ -204,11 +202,19 @@
     <?php $this->load->view('include/Navbar'); ?>
 
 
+    <!-- Background Image -->
+    <div class="image-fluid">
+        <img src="<?php echo base_url('assets/images/science/bg image.jpeg') ?>"
+            class="carousel-image image-fluid d-block w-100" alt="Slide 3">
+    </div>
+
+
+
     <!-- Luxury Code Start  -->
     <div class="container my-5">
         <div class="row">
             <!-- Sidebar Filter Section -->
-            <div class="col-12 col-md-3 mb-4 mt-5">
+            <div class="col-12 col-md-3 mb-4 mt-3">
                 <div class="filter-title">Filter</div>
                 <hr>
                 <div class="filter-section">
@@ -246,63 +252,45 @@
                     <!-- Product Type Filter -->
                     <div class="filter-category">
                         <h6>Product Type</h6>
+
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="luxuryParfum">
-                            <label class="form-check-label" style="font-size: 16px;" for="luxuryParfum">Luxury Parfum
-                                (23)</label>
+                            <input class="form-check-input" type="checkbox" value="" id="bodyLotion">
+                            <label class="form-check-label" style="font-size: 16px;" for="bodyLotion">Body Lotion
+                                (02)</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="mensPerfume">
-                            <label class="form-check-label" style="font-size: 16px; " for="mensPerfume">Men's Perfume
-                                (11)</label>
+                            <input class="form-check-input" type="checkbox" value="" id="combo">
+                            <label class="form-check-label" style="font-size: 16px;" for="combo">Combo (02)</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="womensPerfume">
-                            <label class="form-check-label" style="font-size: 16px;" for="womensPerfume">Women's Perfume
-                                (09)</label>
+                            <input class="form-check-input" type="checkbox" value="" id="faceCream">
+                            <label class="form-check-label" style="font-size: 16px;" for="faceCream">Face Cream
+                                (07)</label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="faceSerum">
+                            <label class="form-check-label" style="font-size: 16px;" for="faceSerum">Face Serum
+                                (12)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="faceWash">
+                            <label class="form-check-label" style="font-size: 16px;" for="faceWash">Face Wash
+                                (05)</label>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
             <!-- Product Grid Section -->
             <div class="col-12 col-md-9 ">
-                <div class="row mb-4">
-
-                    <ul class="nav nav-pills d-flex justify-content-center" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="<?php echo base_url('User/Luxury') ?>">All Products</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="<?php echo base_url('User/ForMen') ?>">Men's Perfume</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="<?php echo base_url('User/ForWomen') ?>">Women's Perfume</a>
-                        </li>
-                    </ul>
+                <div class="row mb-5">
                     <div class="row mt-5">
-                        <!-- Product Card 3 -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="product-card">
-                                <span class="badge-trending">TRENDING</span>
-                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryWoodyPerfumePI_2_2.jpg') ?>"
-                                    alt="Woody Perfume">
-                                <div class="product-info">
-                                    <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <span class="product-price">₹349</span>
-                                        <span class="product-discount">₹399</span>
-                                    </div>
-                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Product Card 1 -->
                         <div class="col-12 col-sm-6 col-md-4 mb-4">
                             <div class="product-card">
                                 <span class="badge-trending">TRENDING</span>
-                                <img src="<?php echo base_url('assets/images/tranding/LuxuryPerfumeShadowPI_2_2.jpg') ?>"
+                                <img src="<?php echo base_url('assets/images/science/science.jpeg') ?>"
                                     alt="Gallant Perfume">
                                 <div class="product-info">
                                     <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
@@ -318,7 +306,7 @@
                         <!-- Product Card 2 -->
                         <div class="col-12 col-sm-6 col-md-4 mb-4">
                             <div class="product-card">
-                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
+                                <img src="<?php echo base_url('assets/images/science/science.jpeg') ?>"
                                     alt="Shadow Perfume">
                                 <div class="product-info">
                                     <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
@@ -331,8 +319,23 @@
                             </div>
                         </div>
 
+                        <!-- Product Card 3 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <span class="badge-trending">TRENDING</span>
+                                <img src="<?php echo base_url('assets/images/science/science.jpeg') ?>"
+                                    alt="Woody Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Woody, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
