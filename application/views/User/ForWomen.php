@@ -28,7 +28,7 @@
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <title>Fragnance | Collection For Men</title>
+    <title>Fragnance | Collection For Women</title>
 
     <style>
         /* Custom Styles for Filter Section */
@@ -269,13 +269,29 @@
                             <a class="nav-link" href="<?php echo base_url('User/Luxury') ?>">All Products</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" href="<?php echo base_url('User/ForMen') ?>">Men's Perfume</a>
+                            <a class="nav-link " href="<?php echo base_url('User/ForMen') ?>">Men's Perfume</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" href="<?php echo base_url('User/ForWomen') ?>">Women's Perfume</a>
+                            <a class="nav-link active" href="<?php echo base_url('User/ForWomen') ?>">Women's Perfume</a>
                         </li>
                     </ul>
                     <div class="row mt-5">
+
+                        <!-- Product Card 2 -->
+                        <div class="col-12 col-sm-6 col-md-4 mb-4">
+                            <div class="product-card">
+                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
+                                    alt="Shadow Perfume">
+                                <div class="product-info">
+                                    <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <span class="product-price">₹349</span>
+                                        <span class="product-discount">₹399</span>
+                                    </div>
+                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Product Card 3 -->
                         <div class="col-12 col-sm-6 col-md-4 mb-4">
                             <div class="product-card">
@@ -301,22 +317,6 @@
                                     alt="Gallant Perfume">
                                 <div class="product-info">
                                     <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <span class="product-price">₹349</span>
-                                        <span class="product-discount">₹399</span>
-                                    </div>
-                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Product Card 2 -->
-                        <div class="col-12 col-sm-6 col-md-4 mb-4">
-                            <div class="product-card">
-                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryGallantPerfumePI_2-min.jpg') ?>"
-                                    alt="Shadow Perfume">
-                                <div class="product-info">
-                                    <h6>OG BEAUTY Luxury Eau De Parfum Shadow, 50 Ml</h6>
                                     <div class="d-flex justify-content-center align-items-center">
                                         <span class="product-price">₹349</span>
                                         <span class="product-discount">₹399</span>
