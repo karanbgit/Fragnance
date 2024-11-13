@@ -98,4 +98,9 @@ class User extends CI_Controller
 	{
 		$this->load->view('User/Offers');
 	}
+
+	public function Cart()
+	{
+		$this->load->view('User/Cart');
+	}
 }

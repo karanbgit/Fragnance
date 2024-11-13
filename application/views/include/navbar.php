@@ -67,14 +67,14 @@
 </style>
 
 <style>
-    /* Styling the badge to position it in the top right corner of the icon */
-    .cart-icon-wrapper {
+    /* Basic styling for the cart badge */
+    .cart-icon {
         position: relative;
     }
 
-    .cart-count-badge {
+    .cart-badge {
         position: absolute;
-        top: -5px;
+        top: -10px;
         right: -10px;
         font-size: 0.75rem;
         padding: 4px 6px;
@@ -153,13 +153,16 @@
             <!-- cart icon -->
 
             <!-- Add to Cart button with count badge -->
-            <a href="#" class="btn btn-success d-inline-flex align-items-center px-3 py-2 m-2">
-                <div class="cart-icon-wrapper me-2">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <span>Add to Cart</span>
-                <span class="badge bg-danger cart-count-badge">3</span>
-            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url() . 'User/Cart'; ?>">
+                        <div class="cart-icon">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="badge bg-danger cart-badge">0</span> <!-- Cart item count -->
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
