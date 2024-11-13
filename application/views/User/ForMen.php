@@ -7,7 +7,7 @@
 
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/images/fevicon/favicon.png') ?>">#
+    <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/images/fevicon/favicon.png') ?>">
 
 
     <!-- Bootstrap CDN Link -->

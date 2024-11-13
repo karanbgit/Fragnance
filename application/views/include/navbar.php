@@ -66,6 +66,22 @@
     }
 </style>
 
+<style>
+    /* Styling the badge to position it in the top right corner of the icon */
+    .cart-icon-wrapper {
+        position: relative;
+    }
+
+    .cart-count-badge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        font-size: 0.75rem;
+        padding: 4px 6px;
+        border-radius: 50%;
+    }
+</style>
+
 
 <nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav ">
     <div class="container">
@@ -135,13 +151,15 @@
             </div>
 
             <!-- cart icon -->
-            <div class="btn-group dropleft">
-                <button type="button" class="btn border-0 dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fa-solid fa-cart-shopping fa-xl text-dark"></i>
-                </button>
-            </div>
 
+            <!-- Add to Cart button with count badge -->
+            <a href="#" class="btn btn-success d-inline-flex align-items-center px-3 py-2 m-2">
+                <div class="cart-icon-wrapper me-2">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <span>Add to Cart</span>
+                <span class="badge bg-danger cart-count-badge">3</span>
+            </a>
         </div>
     </div>
 </nav>
