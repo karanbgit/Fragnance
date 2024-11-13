@@ -88,7 +88,7 @@
     <?php $this->load->view('include/Navbar'); ?>
 
 
-    <div class="container my-5">
+    <div class="container my-5 montserrat">
         <h2 class="text-center mb-4">Shopping Cart</h2>
         <div class="table-responsive">
             <table class="table align-middle cart-table">
@@ -109,7 +109,7 @@
                                 <img src="<?php echo base_url() . 'assets/images/science/science.jpeg'; ?>"
                                     alt="Product Image" class="me-3" style="width: 100px; height: auto;">
                                 <div>
-                                    <h6 class="mb-0">Sport Shoes</h6>
+                                    <h6 class="mb-0">Science 360 Degree Skincare Protection</h6>
                                 </div>
                             </div>
                         </td>
@@ -137,7 +137,7 @@
                                 <img src="<?php echo base_url() . 'assets/images/science/science.jpeg'; ?>"
                                     alt="Product Image" class="me-3" style="width: 100px; height: auto;">
                                 <div>
-                                    <h6 class="mb-0">HRX White Sports Shoes</h6>
+                                    <h6 class="mb-0">Science SPF 50 PA+++ Sunscreen with Vitamin C</h6>
                                 </div>
                             </div>
                         </td>
@@ -165,7 +165,7 @@
                                 <img src="<?php echo base_url() . 'assets/images/science/science.jpeg'; ?>"
                                     alt="Product Image" class="me-3" style="width: 100px; height: auto;">
                                 <div>
-                                    <h6 class="mb-0">ADIDAS SUPERNOVA Running Shoes</h6>
+                                    <h6 class="mb-0">SCIENCE SPF 50 PA+++ Sunscreen Body Lotion</h6>
                                 </div>
                             </div>
                         </td>
@@ -188,11 +188,43 @@
                 </tbody>
             </table>
         </div>
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="Enter Coupon Code">
+                        <button class="btn btn-primary mt-2">Apply</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- <button class="btn btn-primary">Clear Coupon</button> -->
+                    </div>
+
+                    <div class="col-sm-4 text-center">
+                        <div class="total bg-light rounded p-3 mt-3">
+                            <div class="sub">
+                                <p class="d-flex justify-content-between">
+                                    <span>Subtotal:</span> <span>₹ 2997 /-</span>
+                                </p>
+                                <p class="d-flex justify-content-between">
+                                    <span>Delivery:</span> <span>₹ 0.00 /-</span>
+                                </p>
+                                <p class="d-flex justify-content-between">
+                                    <span>Discount:</span> <span>₹ 0.00 /-</span>
+                                </p>
+                            </div>
+                            <div class="grand-total mt-3">
+                                <p class="d-flex justify-content-between">
+                                    <strong>Total:</strong> <span>₹ 2997 /-</span>
+                                </p>
+                            </div>
+                            <button class="btn btn-dark btn-lg btn-block mt-3" type="submit">Continue to
+                                checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-
 
     <!-- Footer Code Include  -->
 
@@ -203,21 +235,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript to handle Add to Cart functionality -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
-            const cartBadge = document.querySelector(".cart-badge");
-            let cartItemCount = 0;
-
-            addToCartButtons.forEach(button => {
-                button.addEventListener("click", function () {
-                    cartItemCount++;
-                    cartBadge.textContent = cartItemCount; // Update cart item count
-                    alert("Item added to cart!");
-                });
-            });
-        });
-    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -230,7 +247,7 @@
                 const price = parseFloat(row.querySelector("td:nth-child(2)").innerText.replace('₹', ''));
                 const quantity = parseInt(row.querySelector(".quantity-input").value);
                 const totalCell = row.querySelector(".item-total");
-                totalCell.innerText = `₹${(price * quantity).toFixed(2)}`;
+                totalCell.innerText = `₹${(price * quantity).toFixed()}`;
             }
 
             decreaseButtons.forEach((button, index) => {

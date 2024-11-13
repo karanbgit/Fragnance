@@ -373,6 +373,23 @@
     </script>
 
 
+    <!-- JavaScript to handle Add to Cart functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+            const cartBadge = document.querySelector(".cart-badge");
+            let cartItemCount = 0;
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    cartItemCount++;
+                    cartBadge.textContent = cartItemCount; // Update cart item count
+                    alert("Item added to cart!");
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

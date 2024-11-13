@@ -322,7 +322,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    
+
     <script>
         const minRange = document.getElementById('minRange');
         const maxRange = document.getElementById('maxRange');
@@ -377,6 +377,25 @@
             }
 
             maxRange.value = maxValue;
+        });
+    </script>
+
+
+
+    <!-- JavaScript to handle Add to Cart functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+            const cartBadge = document.querySelector(".cart-badge");
+            let cartItemCount = 0;
+
+            addToCartButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    cartItemCount++;
+                    cartBadge.textContent = cartItemCount; // Update cart item count
+                    alert("Item added to cart!");
+                });
+            });
         });
     </script>
 
