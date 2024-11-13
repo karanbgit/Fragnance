@@ -146,7 +146,7 @@
                     <i class="fa-solid fa-user fa-xl text-dark"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item" href="<?php echo base_url() . 'User/UserProfile'; ?>">Login</a>
+                    <a class="dropdown-item" href="<?php echo base_url() . 'User/login'; ?>">Login</a>
                 </div>
             </div>
 
