@@ -107,4 +107,9 @@ class User extends CI_Controller
 	{
 		$this->load->view('User/Checkout');
 	}
+
+	public function ProductDiscription()
+	{
+		$this->load->view('User/ProductDiscription');
+	}
 }

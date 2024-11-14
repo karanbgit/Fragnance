@@ -54,8 +54,13 @@
 </head>
 
 <body>
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Checkout</h2>
+
+    <!-- Navbar Code Include  -->
+    <?php $this->load->view('include/Navbar'); ?>
+
+
+    <div class="container my-5 montserrat">
+        <h2 class="text-center mb-4">CHECKOUT</h2>
         <div class="row">
             <!-- Customer Information Section -->
             <div class="col-md-8 order-md-1">
@@ -194,8 +199,8 @@
                     <hr class="mb-4">
                     <a href="<?php echo base_url('User/Cart'); ?>" class="btn btn-secondary btn-md btn-block ms-3">Back
                         to Cart</a>
-                    <a href="<?php echo base_url('User/Payment'); ?>"><button class="btn btn-success btn-md ms-3 btn-block"
-                            type="submit">Pay Now</button></a>
+                    <a href="<?php echo base_url('User/Payment'); ?>"><button
+                            class="btn btn-success btn-md ms-3 btn-block" type="submit">Pay Now</button></a>
 
                 </form>
             </div>

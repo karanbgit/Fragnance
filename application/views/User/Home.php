@@ -253,20 +253,23 @@
 
                     <div class="row mt-5">
                         <!-- Product Card 1 -->
+
                         <div class="col-12 col-sm-6 col-md-3 mb-4">
-                            <div class="product-card">
-                                <span class="badge-trending">TRENDING</span>
-                                <img src="<?php echo base_url('assets/images/tranding/OGLuxuryPerfumeSmokey.jpg') ?>"
-                                    alt="Gallant Perfume">
-                                <div class="product-info">
-                                    <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
-                                    <div class="d-flex justify-content-center align-items-center">
-                                        <span class="product-price">₹349</span>
-                                        <span class="product-discount">₹399</span>
+                            <a class="text-decoration-none" href="<?php echo base_url('User/ProductDiscription'); ?>">
+                                <div class="product-card">
+                                    <span class="badge-trending">TRENDING</span>
+                                    <img src="<?php echo base_url('assets/images/tranding/OGLuxuryPerfumeSmokey.jpg') ?>"
+                                        alt="Gallant Perfume">
+                                    <div class="product-info">
+                                        <h6>OG BEAUTY Luxury Eau De Parfum Gallant, 50 Ml</h6>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <span class="product-price">₹349</span>
+                                            <span class="product-discount">₹399</span>
+                                        </div>
+                                        <button class="btn add-to-cart-btn">ADD TO CART</button>
                                     </div>
-                                    <button class="btn add-to-cart-btn">ADD TO CART</button>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
 
