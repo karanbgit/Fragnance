@@ -28,7 +28,6 @@ class User extends CI_Controller
 	{
 		$this->load->view('User/AboutUs');
 	}
-
 	public function ContactUs()
 	{
 		$this->load->view('User/ContactUs');
@@ -102,5 +101,10 @@ class User extends CI_Controller
 	public function Cart()
 	{
 		$this->load->view('User/Cart');
+	}
+
+	public function Checkout()
+	{
+		$this->load->view('User/Checkout');
 	}
 }

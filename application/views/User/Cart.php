@@ -193,7 +193,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <input type="text" class="form-control" placeholder="Enter Coupon Code">
-                        <button class="btn btn-primary mt-2">Apply</button>
+                        <a href="#"><button class="btn btn-primary mt-2">Apply</button></a>
                     </div>
                     <div class="col-sm-4">
                         <!-- <button class="btn btn-primary">Clear Coupon</button> -->
@@ -217,8 +217,8 @@
                                     <strong>Total:</strong> <span>₹ 2997 /-</span>
                                 </p>
                             </div>
-                            <button class="btn btn-dark btn-lg btn-block mt-3" type="submit">Continue to
-                                checkout</button>
+                            <a href="<?php echo base_url('User/Checkout'); ?>"><button class="btn btn-dark btn-lg btn-block mt-3" type="submit">Continue to
+                                    checkout</button></a>
                         </div>
                     </div>
                 </div>
