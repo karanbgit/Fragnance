@@ -85,7 +85,94 @@
 
     <!-- Navbar Code Include  -->
 
-    <?php $this->load->view('include/Navbar'); ?>
+    <nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="<?php echo base_url() . 'User/index'; ?>">
+                <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" width="70" height="70">
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-lg-0 montserrat">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fs-5 mx-1 navStyle"
+                            href="<?php echo base_url() . 'User/Luxury'; ?>">
+                            Luxury
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1 text-dark fs-5 navStyle"
+                            href="<?php echo base_url() . 'User/Natural'; ?>">
+                            Natural
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1 text-dark fs-5 navStyle"
+                            href="<?php echo base_url() . 'User/Science'; ?>">
+                            Science
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1 text-dark fs-5 navStyle"
+                            href="<?php echo base_url() . 'User/Wellness'; ?>">
+                            Wellness
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-1 text-dark fs-5 navStyle"
+                            href="<?php echo base_url() . 'User/Offers'; ?>">
+                            Offers
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Search Icon -->
+                <form class="d-flex me-2">
+                    <div class="input-group">
+                        <input class="form-control me-2 search-input" type="search" name="query" placeholder="Search"
+                            aria-label="Search">
+                        <a href="#" class="input-group-text border-0 text-decoration-none"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: transparent;">
+                            <i class="fa-solid fa-search"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <!-- User Icon -->
+                <div class="dropdown">
+                    <button class="btn border-0 dropdown-toggle" type="button" id="userDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user fa-xl text-dark"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="<?php echo base_url() . 'User/login'; ?>">Login</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cart Icon -->
+                <ul class="navbar-nav me-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url() . 'User/Cart'; ?>">
+                            <div class="cart-icon">
+                                <i class="fas fa-shopping-cart fa-lg"></i>
+                                <span class="badge bg-danger cart-badge">0</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
 
 
     <div class="container my-5 montserrat">
