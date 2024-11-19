@@ -1,10 +1,9 @@
-<!-- navbar section -->
-
+<!-- Navbar Section -->
 <style>
     .montserrat {
         font-family: "Montserrat", sans-serif;
         font-optical-sizing: auto;
-        font-weight: <weight>;
+        font-weight: normal;
         font-style: normal;
     }
 
@@ -51,23 +50,19 @@
         width: 100%;
     }
 
-    /* CArouser CSS */
-    /* Default height for larger screens */
+    /* Carousel CSS */
     .carousel-image {
         height: 550px;
     }
 
-    /* Media query for mobile view */
     @media (max-width: 768px) {
         .carousel-image {
             height: auto;
-            /* Makes height responsive on smaller screens */
         }
     }
 </style>
 
 <style>
-    /* Basic styling for the cart badge */
     .cart-icon {
         position: relative;
     }
@@ -80,28 +75,34 @@
         padding: 4px 6px;
         border-radius: 50%;
     }
+
+    @media (max-width: 768px) {
+        .cart-badge {
+            position: relative;
+            top: -10px;
+            right: -10px;
+        }
+    }
 </style>
 
-
-<nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav ">
+<nav class="navbar navbar-expand-lg navbar-light shadow sticky-nav">
     <div class="container">
-        <!-- logo -->
+        <!-- Logo -->
         <a class="navbar-brand" href="<?php echo base_url() . 'User/index'; ?>">
             <img src="<?= base_url('assets/images/logo.png') ?>" alt="Logo" width="70" height="70">
         </a>
 
-        <!-- toggle button -->
+        <!-- Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- menu -->
+        <!-- Menu -->
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-
-            <ul class="navbar-nav mx-auto mb-lg-0 montserrat ">
+            <ul class="navbar-nav mx-auto mb-lg-0 montserrat">
                 <li class="nav-item">
-                    <a class="nav-link text-dark fs-5 mx-1 navStyle " href="<?php echo base_url() . 'User/Luxury'; ?>">
+                    <a class="nav-link text-dark fs-5 mx-1 navStyle" href="<?php echo base_url() . 'User/Luxury'; ?>">
                         Luxury
                     </a>
                 </li>
@@ -127,7 +128,7 @@
                 </li>
             </ul>
 
-            <!-- search icon -->
+            <!-- Search Icon -->
             <form class="d-flex me-2">
                 <div class="input-group">
                     <input class="form-control me-2 search-input" type="search" name="query" placeholder="Search"
@@ -139,26 +140,24 @@
                 </div>
             </form>
 
-            <!-- user icon -->
-            <div class="btn-group dropleft">
-                <button type="button" class="btn border-0 dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+            <!-- User Icon -->
+            <div class="dropdown">
+                <button class="btn border-0 dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">
                     <i class="fa-solid fa-user fa-xl text-dark"></i>
                 </button>
-                <div class="dropdown-menu dropdown-menu-end">
-                    <a class="dropdown-item" href="<?php echo base_url() . 'User/login'; ?>">Login</a>
-                </div>
+                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="<?php echo base_url() . 'User/login'; ?>">Login</a></li>
+                </ul>
             </div>
 
-            <!-- cart icon -->
-
-            <!-- Add to Cart button with count badge -->
-            <ul class="navbar-nav">
+            <!-- Cart Icon -->
+            <ul class="navbar-nav me-3">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url() . 'User/Cart'; ?>">
                         <div class="cart-icon">
                             <i class="fas fa-shopping-cart fa-lg"></i>
-                            <span class="badge bg-danger cart-badge">0</span> <!-- Cart item count -->
+                            <span class="badge bg-danger cart-badge">0</span>
                         </div>
                     </a>
                 </li>
@@ -166,4 +165,3 @@
         </div>
     </div>
 </nav>
-<!-- navbar section -->

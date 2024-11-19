@@ -201,7 +201,6 @@
                         to Cart</a>
                     <a href="<?php echo base_url('User/Payment'); ?>"><button
                             class="btn btn-success btn-md ms-3 btn-block" type="submit">Pay Now</button></a>
-
                 </form>
             </div>
 
@@ -248,7 +247,6 @@
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
 
